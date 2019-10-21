@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Art Gallery</title>
+	<link href="main.css" rel="stylesheet" type="text/css">
+	<script src="jquery-3.4.1.min.js"></script>
+	<script src="artObject.js"></script>
+</head>
+
+<body>
+	
+	<h1>The Tufts Gallery of Art</h1>
+	
+	
+
+	
+	<div class="gallery"> 
+		
+		<div class="work1">
+			<div class="image1"></div>
+					<div class="expanded1">
+						<h1 class="artName1"></h1>
+						<h3 class="price1"></h3>	
+						<div class="expandedImg1"></div>
+						
+					</div>
+		</div>
+		
+		<div class="work2">
+			<div class="image2"></div>
+				<div class="expanded2">
+						<h1 class="artName2"></h1>
+						<h3 class="price2"></h3>
+						<div class="expandedImg2"></div>
+						
+					</div>
+		</div>
+		<div class="work3">
+			<div class="image3"></div>
+				<div class="expanded3">
+					<div class="buttom3">
+						<h1 class="artName3"></h1>
+						<h3 class="price3"></h3>
+						<div class="expandedImg3"></div>
+						
+					</div>
+				</div>
+		</div>
+		<div class="work4">
+			<div class="image4"></div>
+				<div class="expanded4">
+					<div class="buttom4">
+						<h1 class="artName4"></h1>
+						<h3 class="price4"></h3>
+						<div class="expandedImg4"></div>
+						
+					</div>
+				</div>
+		</div>
+		<div class="work5">
+			<div class="image5"></div>
+				<div class="expanded5">
+					<div class="buttom5">
+						<h1 class="artName5"></h1>
+						<h3 class="price5"></h3>
+						<div class="expandedImg5"></div>
+						
+					</div>
+				</div>
+		</div>
+	
+	</div>
+	
+	<script language="javascript">
+		
+		var artObjectArray = new Array();
+		
+		artObjectArray[0] = new artObject("Statue of Apollo", "$300,000.00", "greekStatue.jpg");
+		artObjectArray[1] = new artObject("Indian Woman", "$54,000.00", "indianArt.jpg");
+		artObjectArray[2] = new artObject("Iranian Tiles", "$1000.00 e.a", "iranianArt.jpg");
+		artObjectArray[3] = new artObject("Eye of Ra", "$7,540.00", "egyptianArt.jpg");
+		artObjectArray[4] = new artObject("The Great Wave", "$5,500.00", "theGreatWave.jpg");
+		
+//		var name = statue.returnName()	
+//		$(".artName").text(statue.returnName());
+//		$(".price").html(statue.returnPrice());
+		
+		$("h1.artName1").html(artObjectArray[0].returnName());
+		$("h3.price1").html(artObjectArray[0].returnPrice());
+		
+		$("h1.artName1").hide();
+		$("h3.price1").hide();
+		$("div.work1").click(function() {
+			$("h1.artName1").slideDown(300).delay(5000).slideUp(300);
+			$("h3.price1").slideDown(300).delay(5000).slideUp(300);
+		});
+		
+		$("div.image1").html(artObjectArray[0].returnImage());
+		$("div.expandedImg1").html(artObjectArray[0].returnImageLarge());
+		
+		$("div.expanded1").hide();
+		$("div.work1").hover(function() {
+			$("div.expanded1").toggle();
+		});
+		
+		
+		$("h1.artName2").html(artObjectArray[1].returnName());
+		$("h3.price2").html(artObjectArray[1].returnPrice());
+		
+		$("h1.artName2").hide();
+		$("h3.price2").hide();
+		$("div.work2").click(function() {
+			$("h1.artName2").slideDown(300).delay(5000).slideUp(300);
+			$("h3.price2").slideDown(300).delay(5000).slideUp(300);
+		});
+		
+		
+		$("div.image2").html(artObjectArray[1].returnImage());
+		$("div.expandedImg2").html(artObjectArray[1].returnImageLarge());
+		
+		$("div.expanded2").hide();
+		$("div.work2").hover(function() {
+			$("div.expanded2").toggle();
+		});
+		
+		
+		
+		$("h1.artName3").html(artObjectArray[2].returnName());
+		$("h3.price3").html(artObjectArray[2].returnPrice());
+		
+		$("h1.artName3").hide();
+		$("h3.price3").hide();
+		$("div.work3").click(function() {
+			$("h1.artName3").slideDown(300).delay(5000).slideUp(300);
+			$("h3.price3").slideDown(300).delay(5000).slideUp(300);
+		});
+		
+		$("div.image3").html(artObjectArray[2].returnImage());
+		$("div.expandedImg3").html(artObjectArray[2].returnImageLarge());
+		
+		$("div.expanded3").hide();
+		$("div.work3").hover(function() {
+			$("div.expanded3").toggle();
+		});
+		
+		
+		$("h1.artName4").html(artObjectArray[3].returnName());
+		$("h3.price4").html(artObjectArray[3].returnPrice());
+		
+		$("h1.artName4").hide();
+		$("h3.price4").hide();
+		$("div.work4").click(function() {
+			$("h1.artName4").slideDown(300).delay(5000).slideUp(300);
+			$("h3.price4").slideDown(300).delay(5000).slideUp(300);
+		});
+		
+		$("div.image4").html(artObjectArray[3].returnImage());
+		$("div.expandedImg4").html(artObjectArray[3].returnImageLarge());
+		
+		$("div.expanded4").hide();
+		$("div.work4").hover(function() {
+			$("div.expanded4").toggle();
+		});
+		
+		
+		$("h1.artName5").html(artObjectArray[4].returnName());
+		$("h3.price5").html(artObjectArray[4].returnPrice());
+		
+		$("h1.artName5").hide();
+		$("h3.price5").hide();
+		$("div.work5").click(function() {
+			$("h1.artName5").slideDown(300).delay(5000).slideUp(300);
+			$("h3.price5").slideDown(300).delay(5000).slideUp(300);
+		});
+		
+		$("div.image5").html(artObjectArray[4].returnImage());
+		$("div.expandedImg5").html(artObjectArray[4].returnImageLarge());
+		
+		$("div.expanded5").hide();
+		$("div.work5").hover(function() {
+			$("div.expanded5").toggle();
+		});
+		
+		
+//		$("div.image").hover
+		
+		
+		
+		
+	</script>
+</body>
+</html>
